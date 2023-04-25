@@ -1,0 +1,94 @@
+.container{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    background-color: #001133;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.game{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    background-color: #001133;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.game button{
+    text-transform: uppercase;
+    width: 30%;
+    height: 120px;
+    background-color: aquamarine;
+    text-align: center;
+    border: 1px solid #001133;
+    cursor: pointer;
+    font-size: 68px;
+    font-weight: bolder;
+    background-color: #003399;
+    color:transparent;
+}
+.game button[disabled]{
+    color: #001133;
+}
+.winner {
+    z-index: 11;
+    position: absolute;
+    top: calc(100% - 85px);
+    left:50%;
+    transform: translate(-50%,0%);
+    animation-name: winner;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out ;
+    animation-direction: alternate-reverse;
+    display: none;
+    font-size: 85px;
+    font-weight: bold;
+    color: white;
+}
+.try{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    color: white;
+    font-size: 45px;
+    font-family: bolder;
+    text-transform: uppercase;
+    animation-name: try;
+    animation-duration: 1s;
+    display: none;
+    transform-origin: 0 0;
+}
+@keyframes winner {
+    0%{
+        top:10%;
+        letter-spacing: 0;
+    }
+    50%{
+        letter-spacing: 10px;
+    }
+    100%{
+        top:calc(90% - 85px);
+        letter-spacing: 0;
+    }
+    
+}
+@keyframes try {
+    from{
+        font-size: 0;
+    }
+    to{
+        font-size: 45px;
+    }
+}
