@@ -7,6 +7,15 @@
     overflow: hidden;
     width: 100%;
     height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #003399;
+    text-transform: uppercase;
+    font-size: 50px;
 }
 .game{
     position: absolute;
@@ -68,18 +77,17 @@
     animation-name: try;
     animation-duration: 1s;
     display: none;
-    transform-origin: 0 0;
 }
 @keyframes winner {
     0%{
-        top:10%;
+        top:20%;
         letter-spacing: 0;
     }
     50%{
         letter-spacing: 10px;
     }
     100%{
-        top:calc(90% - 85px);
+        top:65%;
         letter-spacing: 0;
     }
     
